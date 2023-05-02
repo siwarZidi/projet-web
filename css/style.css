@@ -6594,6 +6594,7 @@ button.bg-dark:focus {
 
 .justify-content-center {
   justify-content: center !important;
+  text-decoration-color: #138496;
 }
 
 .justify-content-between {
