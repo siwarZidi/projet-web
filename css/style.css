@@ -528,6 +528,8 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
+  
+  
 }
 
 .img-thumbnail {
@@ -6594,7 +6596,7 @@ button.bg-dark:focus {
 
 .justify-content-center {
   justify-content: center !important;
-  text-decoration-color: #138496;
+  
 }
 
 .justify-content-between {
