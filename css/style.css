@@ -6106,13 +6106,13 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #FFFFFF !important;
+  background-color: #f7f1e9 !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #bac9ff !important;
+  background-color: #f7f1e9 !important;
 }
 
 .bg-success {
@@ -9604,4 +9604,7 @@ video#video{
 .corps{
   background-color:  #f7f1e9;
 
+}
+.bg-s{
+  background-color: #FFFFFF;
 }
