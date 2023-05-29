@@ -1,6 +1,16 @@
 <?php 
-session_start(); 
-include "db_conn.php";
+session_start();
+$sname= "localhost";
+$unmae= "root";
+$password = "";
+
+$db_name = "web";
+
+$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+
+if (!$conn) {
+    echo "Connection failed!";
+}
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
 

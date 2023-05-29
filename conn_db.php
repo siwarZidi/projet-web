@@ -4,10 +4,11 @@ $sname= "localhost";
 $unmae= "root";
 $password = "";
 
-$db_name = "test_db";
+$db_name = "web";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
 if (!$conn) {
-	echo "Connection failed!";
+    echo "Connection failed!";
 }
+?>
