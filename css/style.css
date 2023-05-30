@@ -802,6 +802,9 @@ pre code {
 .order-7 {
   order: 7;
 }
+.hidden{
+  display: none;
+}
 
 .order-8 {
   order: 8;

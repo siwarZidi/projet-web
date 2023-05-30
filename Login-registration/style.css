@@ -70,6 +70,7 @@ button:hover{
 }
 
 h1 {
+	font-size: 130px;
 	text-align: center;
 	color: #fff;
 }
@@ -83,4 +84,23 @@ h1 {
 }
 .ca:hover {
 	text-decoration: underline;
-} 
+}
+.button {
+	display: inline-block;
+	padding: 30px 20px;
+	background-color: #c5837c;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.button-container {
+	display: flex;
+}

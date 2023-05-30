@@ -12,8 +12,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 </head>
 <body>
      <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
-     <a href="logout.php">Logout</a>
-     <a href="../shop.php">Start Shopping</a>
+     <div class="button-container">
+         <a href="../shop.php" class="button">Start Shopping</a>
+         <a href="logout.php" class="button">Logout</a>
+     </div>
 
 </body>
 </html>
