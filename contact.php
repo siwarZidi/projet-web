@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
+    <title>S&J Fashion</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -62,8 +62,8 @@
         </div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                <a href="index.html" class="text-decoration-none">
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">S&J</span>Fashion</h1>
                 </a>
             </div>
             <div class="col-lg-6 col-6 text-left">
@@ -106,20 +106,20 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                                <a href="" class="dropdown-item">Men's Dresses</a>
-                                <a href="" class="dropdown-item">Women's Dresses</a>
-                                <a href="" class="dropdown-item">Baby's Dresses</a>
+                                <a href="Men_dresses.html" class="dropdown-item">Men's Dresses</a>
+                                <a href="Women's%20Dresses.html" class="dropdown-item">Women's Dresses</a>
+                                <a href="Baby's%20Dresses.html" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
-                        <a href="" class="nav-item nav-link">Shirts</a>
-                        <a href="" class="nav-item nav-link">Jeans</a>
-                        <a href="" class="nav-item nav-link">Swimwear</a>
-                        <a href="" class="nav-item nav-link">Sleepwear</a>
-                        <a href="" class="nav-item nav-link">Sportswear</a>
-                        <a href="" class="nav-item nav-link">Jumpsuits</a>
-                        <a href="" class="nav-item nav-link">Blazers</a>
-                        <a href="" class="nav-item nav-link">Jackets</a>
-                        <a href="" class="nav-item nav-link">Shoes</a>
+                        <a href="Shirts.html" class="nav-item nav-link">Shirts</a>
+                        <a href="Jeans.html" class="nav-item nav-link">Jeans</a>
+                        <a href="Swimwear.html" class="nav-item nav-link">Swimwear</a>
+                        <a href="Sleepwear.html" class="nav-item nav-link">Sleepwear</a>
+                        <a href="Sports.html" class="nav-item nav-link">Sportswear</a>
+                        <a href="Blazers.html" class="nav-item nav-link">Blazers</a>
+                        <a href="Jackets.html" class="nav-item nav-link">Jackets</a>
+                        <a href="shoes.html" class="nav-item nav-link">Shoes</a>
+                        <a href="accessoires.html" class="nav-item nav-link">Accessoires</a>
                     </div>
                 </nav>
             </div>
@@ -139,15 +139,15 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
+                                    <a href="shopping_cart.php" class="dropdown-item">Shopping Cart</a>
                                     <a href="checkout.html" class="dropdown-item">Checkout</a>
                                 </div>
                             </div>
                             <a href="contact.html" class="nav-item nav-link active">Contact</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
-                            <a href="" class="nav-item nav-link">Login</a>
-                            <a href="" class="nav-item nav-link">Register</a>
+                            <a href="Login-registration/login.php" class="nav-item nav-link">Login</a>
+                            <a href="Login-registration/signup.php" class="nav-item nav-link">Register</a>
                         </div>
                     </div>
                 </nav>
@@ -179,27 +179,34 @@
         <div class="row px-xl-5">
             <div class="col-lg-7 mb-5">
                 <div class="contact-form">
-                    
-                    <form name="sentMessage" action="comments.php" id="contactForm" novalidate="novalidate" method="post">
+
+                    <form  action="comments.php"  method="post">
+                        <?php if (isset($_GET['error'])) { ?>
+                            <p class="error"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+
+                        <?php if (isset($_GET['success'])) { ?>
+                            <p class="success"><?php echo $_GET['success']; ?></p>
+                        <?php } ?>
                         <div class="control-group">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
-                                required="required" data-validation-required-message="Please enter your name" />
+                                   required="required" data-validation-required-message="Please enter your name" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
-                                required="required" data-validation-required-message="Please enter your email" />
+                                   required="required" data-validation-required-message="Please enter your email" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
-                                required="required" data-validation-required-message="Please enter a subject" />
+                                   required="required" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <textarea class="form-control" rows="6" id="message" name="msg" placeholder="Message"
-                                required="required"
-                                data-validation-required-message="Please enter your message"></textarea>
+                            <textarea class="form-control" rows="6" id="msg" name="msg" placeholder="Message"
+                                      required="required"
+                                      data-validation-required-message="Please enter your message"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div>
@@ -207,8 +214,10 @@
                                 Message</button>
                         </div>
                     </form>
+
                 </div>
             </div>
+
             <div class="col-lg-5 mb-5">
                 <h5 class="font-weight-semi-bold mb-3">Get In Touch</h5>
                 <div class="d-flex flex-column mb-3">
@@ -229,14 +238,15 @@
     <!-- Contact End -->
 
 
-    <!-- Footer Start -->
-    <div class="corps">
 
-        <div class="container-fluid bg-secondary text-dark mt-5 pt-5 ">
+        <!-- Footer Start -->
+
+
+        <div class="container-fluid bg-secondary text-dark mt-5 pt-5 corps ">
             <div class="row px-xl-5 pt-5">
                 <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
                     <a href="" class="text-decoration-none">
-                        <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper</h1>
+                        <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">S&J</span>Fashion</h1>
                     </a>
                     <p>"Fashion is not something that exists in dresses only. Fashion is in the sky, in the street, fashion has to do with ideas, the way we live, what is happening." - Coco Chanel</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i> Centre Urbain Nord Tunis  </p>
@@ -251,20 +261,20 @@
                                 <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
                                 <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
                                 <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                                <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                <a class="text-dark mb-2" href="shopping_cart.php"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
                                 <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                <a class="text-dark" href="contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
                             <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
-                            <form action="">
+                            <form action="newsletter.php" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+                                    <input type="text" name="name" id="name" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
-                                        required="required" />
+                                    <input type="email" name="email" id="email" class="form-control border-0 py-4" placeholder="Your Email"
+                                           required="required" />
                                 </div>
                                 <div>
                                     <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
@@ -288,7 +298,7 @@
             </div>
         </div>
         <!-- Footer End -->
-    
+
     </div>
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>

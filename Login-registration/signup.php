@@ -63,9 +63,9 @@
                  name="re_password" 
                  placeholder="Re_Password"><br>
 
-          
 
-     	<button type="submit">Sign Up</button>
+         <button type="submit" >Sign Up</button>
+
           <a href="login.php" class="ca">Already have an account?</a>
      </form>
 </body>

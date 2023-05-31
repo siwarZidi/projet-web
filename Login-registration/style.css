@@ -48,6 +48,15 @@ button {
 	margin-right: 10px;
 	border: none;
 }
+#b3{
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
 button:hover{
 	opacity: .7;
 }
@@ -72,7 +81,7 @@ button:hover{
 h1 {
 	font-size: 130px;
 	text-align: center;
-	color: #fff;
+	color: #c5837c;
 }
 
 .ca {

@@ -1,9 +1,8 @@
 <?php
-// Récupérer les valeurs du formulaire
+
 $name = $_POST['name'];
 $email = $_POST['email'];
-$subject = $_POST['subject'];
-$msg = $_POST['msg'];
+
 
 // Connexion à la base de données
 
@@ -21,11 +20,11 @@ if (!$conn) {
 
 
 // Requête SQL pour insérer les données dans la table appropriée
-$sql = "INSERT INTO comments (name,email,subject,message) VALUES ('$name', '$email','$subject','$msg')";
+$sql = "INSERT INTO newsletter (name,email) VALUES ('$name', '$email')";
 
 // Exécuter la requête SQL
 if (mysqli_query($conn, $sql)) {
-    header("Location: contact.php?success=Your message has been sent successfully");
+    header("Location: contact.php?success=You have been subscribe successfully");
     exit();
 }else {
     header("Location: contact.php?error=Please try again");
